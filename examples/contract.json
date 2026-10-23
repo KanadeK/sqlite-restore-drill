@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "user_version": 2,
+  "tables": {
+    "notes": {
+      "min_rows": 2,
+      "max_rows": 100,
+      "required_columns": ["id", "body"]
+    }
+  }
+}

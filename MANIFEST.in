@@ -1,0 +1,4 @@
+include README.md README.zh-CN.md LICENSE CONTRIBUTING.md SECURITY.md THIRD_PARTY.md CHANGELOG.md
+recursive-include examples *.py *.json
+recursive-include tests *.py
+recursive-include scripts *.py

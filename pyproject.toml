@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlite-restore-drill"
+version = "0.1.0"
+description = "Rehearse an offline SQLite backup restore with integrity, foreign-key and data-contract checks."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "KanadeK"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+sqlite-restore-drill = "sqlite_restore_drill.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/KanadeK/sqlite-restore-drill"
+Issues = "https://github.com/KanadeK/sqlite-restore-drill/issues"
+
+[project.optional-dependencies]
+dev = ["ruff==0.17.2", "coverage==7.17.0", "build==1.6.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.coverage.run]
+source = ["sqlite_restore_drill"]
+branch = true
+patch = ["subprocess"]
+parallel = true
+
+[tool.coverage.report]
+show_missing = true

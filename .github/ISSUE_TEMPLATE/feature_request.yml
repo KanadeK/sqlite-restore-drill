@@ -1,0 +1,9 @@
+name: Feature request
+description: Explain a concrete workflow that is currently difficult
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and current workaround
+    validations:
+      required: true
